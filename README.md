@@ -13,6 +13,8 @@ M = X.mean()    #Calculates the mean of the elements in array X and stores the v
 W = (X - M)   #Subtracts array "X" to array "M" and stores the value in "W"
 Z = W/STD   #Divides array "W" to array "STD" to get the normalized array and stores the value in array "Z"
 
+np.save("X_normalized.npy", Z)   #Saves file X_normalized.ipynb into .npy
+
 print("Normal Array: \n", X)   #Displays the randomly generated array
 print("Normalized Array: \n", Z) #Displays the Normalized array
 ```
@@ -25,6 +27,8 @@ A = np.arange(1,101)   #Generates an array that consists of numbers 1 - 100 and 
 np.shape(A)   #Declares the shape of array "A"
 squares = A.reshape(10,10)**2   #Reshapes array "A" to 10 x 10 while getting the square of each element in the array and storing the value in "squares"
 divby3 = squares[squares%3==0]   #Takes the moldulus of squares and only takes the values that returns the remainder 0 and stores it in "divby3"
+
+np.save("div_by_3.npy", divby3)   #Saves file div_by_3.ipynb
 
 print("Array 10 x 10: \n", squares)   #Displays the array which stores the squares of each element from the original array
 print("Numbers that are divisible by 3: \n", divby3)   #Displays the array which stores the elements that are divisible by 3
